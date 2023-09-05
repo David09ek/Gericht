@@ -1,0 +1,971 @@
+*{
+    box-sizing: border-box;
+    background: #0C0B08;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: auto;
+}
+header{
+    height: 7.5rem;
+    display: flex;
+    flex-direction:row;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul{
+    margin:  0px 160px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+.menu ul a{
+    margin: 0px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%; 
+    letter-spacing: 0.02rem;
+    padding: 0rem 0.625rem;
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login li{
+    margin-top: 15px;
+    padding: 0rem 1.20rem 0rem 1.20rem;
+}
+.login ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+.login ul a{
+    
+    text-decoration: none;
+    font-family: Open Sans;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.03rem;
+}
+.Hero {
+    display: flex;
+    width: 105rem;
+    height: 51.75rem;
+    margin-left: 78%;
+    margin-top: 6.25rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 11.25rem; 
+}
+.content .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0px ;
+    margin:20px 20px 0px 350px;
+
+
+}
+.content h2 {
+    color: #DCCA87;
+    font-size: 2.5rem;
+    font-family: Cormorant Upright;
+    font-weight: 700;
+    line-height: 130%; /* 7.3125rem */
+    letter-spacing: 0.04em;
+    width: 15.625rem;
+    text-transform: capitalize;
+    /* font-style: normal; */
+}
+.content h5{
+    color:#FFF;
+    font-family: Cormorant Upright;
+    font-size: 15px;
+    font-style: normal; 
+    font-weight: 500;
+    line-height: 130%; /*1.86875rem */
+    letter-spacing: 0.0475rem;
+    /* text-transform: capitalize; */
+}
+.content p {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.04em;
+    width: 28.3125rem;
+    text-align: left;
+    color: #AAA;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#btn-content {
+    background: #DCCA87;
+    font-family: Cormorant Upright;
+    width: 9.8125rem;
+    height: 2.75rem;
+    padding: 0.5rem 2rem;
+    display: flex;
+    padding: 0.5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img img {
+    width: 25rem;
+    height: 28.125rem;
+    margin-left: -80px;
+}
+.scroller{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: right;
+    margin-left: 98rem;
+    margin-top: -6.625rem;
+    gap: 1.5rem;
+}
+.scroller svg{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+    gap: 1.5rem;
+}
+.scroller p{
+    color: #DCCA87;
+    font-family: Cormorant Upright;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+}
+
+.scroller p {
+    color: #DCCA87;
+    font-family: 'Cormorant Upright';
+    font-size: 1.15rem;
+    margin-left: -2.25rem;
+    margin-top: -0.123rem;
+}
+
+.slider {
+    margin-top: 4.5rem;
+    margin-left: 6.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.slider img {
+    margin-bottom: 0.125rem;
+}
+
+.slider span {
+    color: #F5EFDB;
+}
+.hastags {
+    margin-left: 0.25rem; 
+    align-items: left;
+    justify-content: left;
+    display: inline-flex;
+    transform: rotate(-90deg);
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.hastags p {
+    color: #FFF;
+    padding: 0.625rem 0.625rem;
+    font-size: 1.125rem;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25%; /* 1.96875rem */
+    letter-spacing: 0.045rem;
+} 
+.about {
+    display: flex;
+    margin-top: 7.75rem;
+    align-items: center;
+    width: 100%;
+    height: 40.5rem;
+    background-image: url(./images/BG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* gap:1rem; */
+}
+
+.about-us {
+    text-align: right;
+    margin-left: 15.75rem;
+    margin-top: -3.125rem;
+    position: relative;
+    left: 0.125rem;
+    background-color: transparent;
+}
+
+.about-us p {
+    text-align: right;
+    width: 30rem;
+    color:#AAA;
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%; /* 1.75rem */
+    letter-spacing: 0.04rem;
+    background-color: transparent;
+   /* Body 16px Regular */
+}
+
+.about-us h5,
+.our-history h5 {
+    font-family: ' Cormorant Upright';
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #DCCA87;
+    margin-bottom: -0.125rem;
+    background-color: transparent;
+}
+
+#aboutus-btn,
+#ourhistory-btn {
+    width: 8.8125rem;
+    height: 2.75rem;
+    padding: 0.5rem 2rem;
+    background: #DCCA87;
+}
+
+#knife {
+    width: 3.238rem;
+    height: 32rem;
+    margin-left: -12.375rem;
+    background-color: transparent;
+}
+
+.g {
+    margin-left: -4.125rem;
+    background-color: transparent;
+
+    width: 22.4375rem;
+    height: 23.9375rem;
+}
+
+.our-history {
+    margin-top: -3.125rem;
+    width: 43.9375rem;
+    margin-left: -3.125rem;
+    text-align: left;
+    background-color: transparent;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.our-history p {
+    color:#AAA;
+    width: 30rem;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height:150%;
+    text-align: left;
+    background-color: transparent;
+}
+
+.Drinkmenu {
+    margin-top: 6.25rem;
+}
+
+.Drinkmenu h5 {
+    color: #fff;
+    font-family: 'Cormorant Upright';
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
+
+#menusvg {
+    margin-left: 50.5rem;
+    margin-bottom: 2.3rem;
+
+}
+
+.Drinkmenu h2 {
+    font-family: 'Cormorant Upright';
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 5.2rem;
+    text-align: center;
+    color: #DCCA87;
+    margin-top: -1.25rem;
+    line-height: 130%; /* 5.2rem */
+    letter-spacing: 0.16rem;
+}
+
+.Drinkmenu h3 {
+    color:#fff;
+    font-family: 'Cormorant Upright';
+    font-size: 1.4375rem;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+}
+
+.cocktail-img {
+    margin-top: -20.8125rem;
+    width: 12.5rem;
+    height: 19.875rem;
+    margin-left: 25rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.menucontent {
+    display: flex;
+    justify-content: center;
+    margin-left: 3.85rem;
+}
+
+.winebeer h3,
+.cocktail-items h3 {
+    margin-top: 5.5rem;
+    margin-left: 6.25rem;
+    font-family: Cormorant Upright;
+    font-size: 1.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 3.65625rem */
+    letter-spacing: 0.1125rem;
+}
+
+.winebeer li,
+.cocktail-items li {
+    color: #DCCA87;
+    font-family: 'Cormorant Upright';
+
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 1.86875rem */
+    letter-spacing: 0.0575rem;
+    text-transform: capitalize;
+    list-style:none;
+}
+
+.winebeer svg {
+    margin-left: 11.375rem;
+    margin-top: -1.85rem;
+    margin-bottom: 1.25rem;
+    width: 7.4375rem;
+    height: 0.0625rem;
+}
+
+.winebeer h6 {
+    color:#FFF;
+    text-align: center;
+    margin-left: 8.75rem;
+    margin-top: -2.1875rem;
+    
+    font-family: Cormorant Upright;
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 1.86875rem */
+    letter-spacing: 0.0575rem;
+}
+
+.winebeer p {
+    margin-top:  -1.05rem;
+    margin-bottom:  1.05rem;
+    color: #AAAAAA;
+
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.04rem;
+}
+
+.cocktail-items li {
+    color: #DCCA87;
+    font-family: 'Cormorant Upright';
+
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 1.86875rem */
+    letter-spacing: 0.0575rem;
+}
+
+.cocktail-items svg {
+    margin-left: 11.375rem;
+    margin-top: -1.85rem;
+    margin-bottom: 1.25rem;
+
+    width: 7.4375rem;
+    height: 0.0625rem;
+}
+
+.cocktail-items h6 {
+    margin-left: 25.625rem;
+    margin-top: -2.1875rem;
+
+    color:#fff;
+    font-family: Cormorant Upright;
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 1.86875rem */
+    letter-spacing: 0.0575rem;
+}
+
+.cocktail-items p {
+    margin-top: -1.05rem;
+    margin-bottom:  1.05rem;
+    color: #AAAAAA;
+
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.02rem;
+}
+
+.Drinkmenu button {
+    width: 8.5rem;
+    height: 2.75rem;
+    margin-left: 48.875rem;
+    background: #DCCA87;
+    color: #000000;
+}
+
+.chef {  
+    margin-top: 6.5rem;
+    background-image: url(./images/BG.png);
+    background-color: #0C0C0C;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40rem;
+    background-color: transparent;
+}
+
+.chef img {
+    margin-left: 27%;
+    width: 25rem;
+    height: 31.25rem;
+    margin-top: 4.125rem;
+    background-color: transparent;
+}
+
+.the-chef {
+    margin-left: 55%;
+    margin-top: -29%;
+    background-color: transparent;
+}
+
+.the-chef h2 {
+    font-family: 'Cormorant Upright';
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 5.1875rem;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #DCCA87;
+    background-color: transparent;
+    letter-spacing: 0.12rem;
+}
+
+.the-chef h6 {
+    color: #fff;
+    font-family: 'Cormorant Upright';
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin-bottom: -3.5rem;
+    background-color: transparent;
+}
+
+.the-chef svg{
+    width: 5.rem;
+    margin-top: 2.85rem;
+    height: 1.5rem;
+    color: #DCCA87;
+    background-color: transparent;
+}
+
+.the-chef p {
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.45rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+    width: 30.25rem;
+    color: #AAAAAA;
+    background-color: transparent;
+}
+
+.the-chef h5 {
+    font-family: 'Cormorant Upright';
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2.625rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin-bottom: -0.635rem;
+    color: #DCCA87;
+    background-color: transparent;
+}
+
+.the-chef span {
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #AAAAAA;
+    margin-bottom: -10px;
+    background-color: transparent;
+}
+
+#signature {
+    font-family: 'Bestermind';
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 5.1875rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #AAAAAA;
+    background-color: transparent;
+}
+.Video{
+    width: 100%;
+}
+.Video img{
+    width: 100%;
+    height: 42.5rem;
+}
+
+.awd {
+    background-image: url(./images/BG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40rem;
+    margin-top: 7.9375rem;
+}
+
+.awards {
+    margin-left: 25.5rem;
+    /* background-color: transparent; */
+}
+
+.double-spoon img {
+    margin-left: -22.375rem;
+    margin-top: -2.125rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: transparent;
+}
+
+.awards ul {
+    display: flex;
+    margin-top: 3.125rem;
+    margin-left: -3.125rem;
+    background-color: transparent;
+}
+
+.awards ul img {
+    width: 4.9375rem;
+    height: 4.9375rem;
+    background-color: transparent;
+}
+.award-recognition{
+    background-color: transparent;
+}
+.award-recognition h5 {
+    color: #ffff;
+    margin-bottom: 0.3125rem;
+
+    font-family: Cormorant Upright;
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 1.86875rem */
+    letter-spacing: 0.0575rem;
+    background-color: transparent;
+}
+.award-recognition h2 {
+    font-family: 'Cormorant Upright';
+    font-weight: 600;
+    color: #DCCA87;
+
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 5.2rem */
+    letter-spacing: 0.12rem
+}
+
+.awards ul h5 {
+    color: #DCCA87;
+    margin-left: 1.25rem;
+    margin-top: -0.3125rem;
+    margin-bottom: 0.3125rem;
+    background-color: transparent;
+
+    font-family: Cormorant Upright;
+font-size: 1.4375rem;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 1.86875rem */
+letter-spacing: 0.0575rem;
+}
+
+.awards ul p {
+    color: #AAAAAA;
+    width: 9.375rem;
+    margin-left: 1.25rem;
+    background-color: transparent;
+    
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%; /* 1.75rem */
+    letter-spacing: 0.04rem;
+}
+
+.aside-img img {
+    width: 23.875rem;
+    height: 32rem;
+    margin-left: 34.375rem;
+    margin-top: -28.125rem;
+    background-color: transparent;
+}
+.photo-gallery {
+    display: flex;
+    margin-top: 1.25rem;
+}
+
+.gallery-writeup {
+    margin-left: 2.75rem;
+    margin-top: 2.25rem;
+}
+
+.gallery-writeup h5,
+.contact h5 {
+    color:#fff;
+    margin-top: 3.75rem;
+    margin-bottom: 0.3125rem;
+    font-family: 'Cormorant Upright';
+}
+
+.gallery-writeup h2,
+.contact h2 {
+    font-family: 'Cormorant Upright';
+    line-height: 5.1875rem;
+    letter-spacing: 0.03em;
+    color: #DCCA87;
+    margin-bottom: -0.625rem;
+    margin-top: -0.625rem;
+    
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; /* 5.2rem */
+}
+
+.gallery-writeup p {
+    width: 25rem;
+    color: #AAAAAA;
+    font-family: 'Open Sans';
+
+    font-family: Open Sans;
+    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 150%; /*1.75rem*/
+    letter-spacing: 0.05rem;
+    margin-top: 1.9rem;
+}
+
+#btn-gallery,
+#contact-btn {
+    width: 8.5rem;
+    height: 2.75rem;
+    padding: 0.5rem 2rem;
+    border: 0.0625rem;
+    background: #DCCA87;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.gallery {
+    margin-left: 0.9375rem;
+}
+
+.gallery img {
+    width: 11.25rem;
+    height: 21.875rem;
+
+    width: 18.8125rem;
+height: 27.9375rem;
+}
+.contact {
+    display: flex;
+    background-image: url(./images/BG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    height: 40.5rem;
+    /* height: auto; */
+    position: relative;
+    z-index: 1;
+}
+
+.contact-writeup {
+    margin-left: 12.5rem;
+    margin-top: 3.125rem;
+}
+
+.contact-img img {
+    width: 25rem;
+    height: 33.25rem;
+    margin-left: 3.125rem;
+    margin-top: 3.125rem;
+}
+
+.contact p{
+    width: 28.125rem;
+    margin-top: 3.5rem;
+    margin-bottom:2.5rem;
+    color: #AAAAAA;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.02rem;
+}
+.contact-writeup span {
+    display: inline-block;
+    color: #DCCA87;
+}
+
+.contact-writeup ul li {
+    color: #AAAAAA;
+    margin-left: -2.5rem;
+    list-style: none;
+    margin-left: 0.2rem;
+    padding: 7px 0px 7px 0px ;
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%; /* 1.75rem */
+    letter-spacing: 0.04rem;
+}
+footer {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.newsletter {
+    /* background: linear-gradient(0deg, #0C0C0C, #0C0C0C), */
+        linear-gradient(0deg, rgba(220, 202, 135, 0.2), rgba(220, 202, 135, 0.2));
+    border: 1px solid #DCCA8733;
+    width: 65%;
+    margin-left: 15.625rem;
+    height: 21.875rem;
+    text-align: center;
+    position: absolute;
+}
+
+.newsletter h6 {
+    font-family: 'Cormorant Upright';
+    margin-bottom: -0.625rem;
+    margin-top: 2.5rem;
+}
+
+.newsletter svg {
+    margin-bottom: -1.25rem;
+}
+
+.newsletter h1 {
+    font-family: 'Cormorant Upright';
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 5.1875rem;
+    letter-spacing: 0.03em;
+    color: #DCCA87;
+    margin-bottom: 5px;
+}
+
+.newsletter p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    margin-bottom: 1.5625rem;
+}
+
+.newsletter input {
+    /* width: 21.875rem; */
+    width: 70%;
+    height: 2rem;
+    color: #DCCA87;
+    outline: 1px solid #DCCA87;
+    background: #0C0C0C;
+}
+
+.newsletter input::placeholder {
+    color: #AAAAAA;
+    font-family: 'Cormorant Upright';
+}
+
+.newsletter button {
+    width: 7.1875rem;
+    height: 2.5rem;
+    padding: 0.5rem 2rem;
+    background: #DCCA87;
+    margin-left: 1.25rem;
+}
+
+.footer-slider {
+    margin-left: 92%;
+    margin-top: -1.875rem;
+    position: relative;
+    top: 15.625rem;
+}
+
+.footer-slider p {
+    margin-left: -0.625rem;
+    color: #DCCA87;
+    font-family: 'Cormorant Upright';
+}
+
+.footer-items {
+    background-image: url(./images/BG.png);
+    background-color: #0C0C0C;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    margin-top: 6.25rem;
+}
+
+.contact-us {
+    margin-top: 16.125rem;
+    margin-left: 6.5rem;
+}
+
+.contact-us p {
+    width: 21.875rem;
+}
+
+.contact-us h4,
+.working-hours h4 {
+    color: #F5EFDB;
+    font-family: 'Cormorant Upright';
+    text-align: center;
+}
+
+.contact-us li,
+.contact-us p,
+.working-hours li,
+.socials p {
+    color: #AAAAAA;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+.working-hours {
+    margin-top: 15.625rem;
+}
+
+.socials {
+    text-align: center;
+    margin-top: 13.125rem;
+}
+
+.socials h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #DCCA87;
+    font-family: 'Cormorant Upright';
+    text-align: center;
+    margin-bottom: -0.625rem;
+}
+
+.socials ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -2.5rem;
+
+}
+
+.socials li {
+    padding: 0rem 0.625rem;
+}
+
+.working-hours h4 {
+    margin-left: 2.5rem;
+    margin-top: 1.875rem;
+}
+
+.working-hours li {
+    width: 18.875rem;
+    padding: 0.3125rem 0.625rem;
+}
+
+#last {
+    margin-top: 3.125rem;
+    color: #AAAAAA;
+    font-size: 1rem;
+    margin-left: -20.625rem;
+}
