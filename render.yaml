@@ -1,0 +1,27 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# Deploys the site as a Node web service running `next start`, which keeps
+# next/image's on-request optimization available.
+services:
+  - type: web
+    name: gericht
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    # `npm ci` installs devDependencies too (typescript and the @types packages
+    # are needed at build time); it only honours the lockfile, so keep
+    # package-lock.json committed.
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Render defaults new Node services to production; set explicitly so the
+      # build and runtime agree.
+      - key: NODE_ENV
+        value: production
+      # Guards against npm skipping devDependencies during the build step.
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"

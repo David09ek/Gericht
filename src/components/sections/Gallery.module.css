@@ -1,0 +1,84 @@
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.body {
+  max-width: 25rem;
+  color: var(--color-grey);
+  font-size: var(--step-body);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+}
+
+/* The original let four fixed-width images overflow the viewport. They now
+   sit in a snapping scroller, which keeps the same row on desktop and
+   becomes a swipeable strip on touch devices. */
+.scroller {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  /* Let the strip bleed to the viewport edge rather than stopping at the
+     container gutter — it reads as a continuous row, as in the original. */
+  margin-right: calc(var(--gutter) * -1);
+  padding-right: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+}
+
+.scroller::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold);
+}
+
+.track {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: clamp(12rem, 20vw, 18.8125rem);
+  aspect-ratio: 309 / 455;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 400ms ease;
+}
+
+.slide:hover img {
+  scale: 1.05;
+}
+
+@media (max-width: 62rem) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .scroller {
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+  }
+}

@@ -1,0 +1,14 @@
+/* Full-bleed image band between the Chef and Laurels sections. */
+.band {
+  position: relative;
+  width: 100%;
+  /* Matches the original's 42.5rem band height, but scales down instead of
+     letterboxing the image on narrow screens. */
+  height: clamp(16rem, 45vw, 42.5rem);
+}
+
+.band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
