@@ -1,0 +1,104 @@
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 3rem);
+}
+
+.body {
+  max-width: 30rem;
+  color: var(--color-grey);
+  font-size: var(--step-body);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-top: 1.25rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.left {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cta {
+  margin-top: 1.5rem;
+}
+
+/* --- Centre ornament: the G watermark with the knife laid over it --- */
+
+.ornament {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 22vw, 22.4375rem);
+}
+
+.watermark {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.rule {
+  position: absolute;
+  width: 1px;
+  height: 78%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-gold) 18%,
+    var(--color-gold) 82%,
+    transparent
+  );
+  opacity: 0.8;
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+
+@media (max-width: 62rem) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  /* The ornament moves below the two text columns rather than between them. */
+  .ornament {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .left,
+  .right {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 48rem) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .left,
+  .right {
+    grid-row: auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ornament {
+    grid-row: auto;
+    order: -1;
+    width: clamp(9rem, 45vw, 14rem);
+  }
+}

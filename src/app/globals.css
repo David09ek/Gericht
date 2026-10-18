@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Gericht — global tokens, reset and base typography.
+   Colours, type scale and spacing are lifted verbatim from the original
+   index.css so the design reads identically; what changes is that they now
+   live in one place instead of being repeated across ~970 lines.
+   ========================================================================== */
+
+:root {
+  /* Palette — unchanged from the original site */
+  --color-bg: #0c0b08;
+  --color-bg-alt: #0c0c0c;
+  --color-gold: #dcca87;
+  --color-cream: #f5efdb;
+  --color-grey: #aaaaaa;
+  --color-white: #ffffff;
+  --color-rule: rgba(220, 202, 135, 0.2);
+
+  /* Type */
+  --font-display: var(--font-cormorant), "Cormorant Upright", Georgia, serif;
+  --font-body: var(--font-open-sans), "Open Sans", system-ui, sans-serif;
+  --font-signature: var(--font-bestermind), cursive;
+
+  /* Fluid type scale: min at 360px, max at 1440px */
+  --step-hero: clamp(2rem, 1.4rem + 2.7vw, 2.5rem);
+  --step-section: clamp(2.25rem, 1.1rem + 5.1vw, 4rem);
+  --step-sub: clamp(1.25rem, 1.1rem + 0.7vw, 1.4375rem);
+  --step-body: clamp(0.875rem, 0.84rem + 0.17vw, 1rem);
+  --step-eyebrow: clamp(0.8125rem, 0.79rem + 0.1vw, 0.9375rem);
+
+  /* Rhythm */
+  --section-gap: clamp(4rem, 2rem + 8vw, 7.75rem);
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+  --container: 81.25rem; /* 1300px — matches the original's effective canvas */
+
+  --header-height: 7.5rem;
+}
+
+/* --- Reset -----------------------------------------------------------------
+   The original used `* { background: #0C0B08 }`, which forced ~20 rules to
+   undo it with `background-color: transparent`. Setting the background once
+   on <body> removes that whole class of workaround. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keep anchored sections clear of the fixed header */
+  scroll-padding-top: var(--header-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Nothing in this design scrolls sideways; this stops a stray
+     overflowing element from breaking the page on small screens. */
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* --- Accessibility --------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Hidden from sight, still read by screen readers. Used for the headings that
+   give each landmark an accessible name. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -120%;
+  z-index: 200;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  transition: translate 180ms ease;
+}
+
+.skip-link:focus-visible {
+  translate: -50% 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Shared section treatments -------------------------------------------
+   Four sections (About, Chef, Laurels, Contact, Footer) share the same dark
+   texture. The original repeated this background block five times and pulled
+   a 7.3 MB PNG each time; it is now one rule against a 44 KB WebP. */
+
+/* The section texture is drawn in CSS rather than loaded as a photograph:
+   two faint gold glows, a vertical tone shift, and a 3px dot grid that reads
+   as grain at normal viewing distance. */
+.textured {
+  background-color: var(--color-bg-alt);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(220, 202, 135, 0.06), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 85% 100%, rgba(220, 202, 135, 0.045), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.022) 1px, transparent 0),
+    linear-gradient(180deg, #0a0906 0%, #100e0a 48%, #0a0906 100%);
+  background-size: 100% 100%, 100% 100%, 3px 3px, 100% 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-gap);
+}

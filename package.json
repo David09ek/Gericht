@@ -1,0 +1,33 @@
+{
+  "name": "gericht",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "audit:responsive": "node scripts/audit-responsive.mjs",
+    "audit:a11y": "node scripts/audit-a11y.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "axe-core": "^4.14.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "puppeteer-core": "^25.14.0",
+    "typescript": "^5"
+  },
+  "description": "Gericht fine dining restaurant site, built with Next.js.",
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

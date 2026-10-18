@@ -1,0 +1,42 @@
+/* Replaces the four award medal images with a drawn equivalent: a laurel-less
+   gold ring carrying the award's numeral. */
+.medal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 4.9375rem;
+  height: 4.9375rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, rgba(220, 202, 135, 0.12), transparent 70%);
+}
+
+/* Inner hairline ring. */
+.medal::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.numeral {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-gold);
+}
+
+@media (max-width: 30rem) {
+  .medal {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .numeral {
+    font-size: 1.25rem;
+  }
+}

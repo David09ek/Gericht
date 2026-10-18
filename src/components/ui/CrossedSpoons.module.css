@@ -1,0 +1,26 @@
+.emblem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.spoon {
+  position: absolute;
+  color: var(--color-gold);
+  width: 3.25rem;
+  height: auto;
+}
+
+.one {
+  rotate: -35deg;
+}
+
+.two {
+  rotate: 35deg;
+  scale: -1 1;
+}

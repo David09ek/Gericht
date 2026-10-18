@@ -1,0 +1,60 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.eyebrow {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: var(--step-eyebrow);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.spoon {
+  color: var(--color-gold);
+}
+
+.title {
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+}
+
+/* 2.5rem treatment — About, Our History, Today's Special, What we believe in. */
+.md {
+  font-size: clamp(1.875rem, 1.3rem + 2.5vw, 2.5rem);
+}
+
+/* 4rem treatment — Our Laurels, Photo Gallery, Find Us. */
+.lg {
+  font-size: var(--step-section);
+}
+
+.start {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.end {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Right-aligned copy becomes hard to scan once the column is narrow,
+   so that variant falls back to left alignment on small screens. */
+@media (max-width: 48rem) {
+  .end {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

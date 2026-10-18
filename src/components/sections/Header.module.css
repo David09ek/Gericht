@@ -1,0 +1,205 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-height);
+  padding: 1rem var(--gutter);
+  background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: clamp(8.75rem, 12vw, 12.4375rem);
+  height: auto;
+}
+
+/* --- Desktop navigation --- */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 1.25rem);
+}
+
+.navLink {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  transition: color 180ms ease;
+}
+
+.navLink:hover {
+  color: var(--color-gold);
+}
+
+/* --- Login / Book table --- */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.actionLink {
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+.actionLink:hover {
+  color: var(--color-gold);
+}
+
+/* The drawer carries its own copy of the actions; on desktop the ones in
+   the header bar are used instead. */
+.drawerActions {
+  display: none;
+}
+
+/* Replaces icons/line.png — a 190-byte image used purely as a 1px rule,
+   which also happened to 404 in production because of a filename case
+   mismatch. A border does the same job with no request. */
+.divider {
+  width: 1px;
+  height: 1.875rem;
+  background-color: var(--color-white);
+  opacity: 0.5;
+}
+
+/* --- Mobile toggle --- */
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.6rem;
+  flex-shrink: 0;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-gold);
+  transition: translate 220ms ease, rotate 220ms ease, opacity 160ms ease;
+}
+
+.toggleOpen span:nth-child(1) {
+  translate: 0 7px;
+  rotate: 45deg;
+}
+
+.toggleOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggleOpen span:nth-child(3) {
+  translate: 0 -7px;
+  rotate: -45deg;
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+
+@media (max-width: 64rem) {
+  .navList {
+    gap: 0.25rem;
+  }
+
+  .navLink {
+    font-size: 0.9375rem;
+    padding: 0.25rem 0.375rem;
+  }
+
+  .actionLink {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Below 900px the three-column header can no longer fit, so the nav and
+   actions collapse into a full-screen drawer. */
+@media (max-width: 56.25rem) {
+  .toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    top: var(--header-height);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 3rem var(--gutter);
+    background-color: var(--color-bg);
+    /* Hidden by default; `visibility` keeps it out of the tab order. */
+    visibility: hidden;
+    opacity: 0;
+    translate: 0 -1rem;
+    transition: opacity 220ms ease, translate 220ms ease, visibility 220ms;
+  }
+
+  .navOpen {
+    visibility: visible;
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  .navLink {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .drawerActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-rule);
+    width: 100%;
+  }
+
+  .drawerActions .actionLink {
+    font-size: 1rem;
+  }
+
+  /* The header's own copy of the actions is replaced by the drawer's. */
+  .actions {
+    display: none;
+  }
+}

@@ -1,0 +1,86 @@
+.heading {
+  margin-inline: auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.columnTitle {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 1.8125rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  align-self: stretch;
+  padding-block: 2rem;
+}
+
+.dividerLine {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  opacity: 0.7;
+}
+
+.dividerMark {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.4em;
+  opacity: 0.85;
+}
+
+.cta {
+  display: block;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+
+/* Below 64rem the centre photo squeezes the menu columns too hard, so it
+   drops out and the two lists share the full width. */
+@media (max-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}

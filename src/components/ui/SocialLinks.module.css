@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.link {
+  display: inline-flex;
+  /* 44px target, so the icons are reachable on touch. */
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cream);
+  transition: color 180ms ease;
+}
+
+.link:hover {
+  color: var(--color-gold);
+}

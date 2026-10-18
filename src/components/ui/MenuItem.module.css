@@ -1,0 +1,52 @@
+/* The original built each row by stacking an <li>, an <svg> rule, an <h6>
+   and a <p>, then dragging them into place with negative margins
+   (margin-top: -2.1875rem, margin-left: 25.625rem, ...). A two-row flex
+   layout produces the same result and survives any column width. */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name {
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: var(--step-sub);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+/* The hairline that fills the space between name and price. */
+.rule {
+  flex: 1;
+  height: 1px;
+  min-width: 1.5rem;
+  background-color: var(--color-white);
+  opacity: 0.85;
+}
+
+.price {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: var(--step-sub);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+.detail {
+  color: var(--color-grey);
+  font-size: var(--step-body);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+}

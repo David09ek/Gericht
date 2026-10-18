@@ -1,0 +1,25 @@
+.wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(25rem, 100%);
+  aspect-ratio: 1;
+}
+
+/* Offset square frame behind the rings — the same gold outline motif the
+   original used behind its photographs. */
+.frame {
+  position: absolute;
+  inset: 12% 12% 12% 12%;
+  translate: 8% -8%;
+  border: 1px solid var(--color-gold);
+  opacity: 0.55;
+}
+
+.rings {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* A soft glow so the ornament sits in the page rather than on it. */
+  filter: drop-shadow(0 0 48px rgba(220, 202, 135, 0.12));
+}
